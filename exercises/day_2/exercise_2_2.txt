@@ -1,0 +1,46 @@
+День 2 Задание 2 Счет букв в числительных
+
+Если записать числа от 1 до 5 английскими словами (one, two, three, four, five), то они оспользуют соответственно 3, 3, 5, 4 и 4 букв.
+Написать программу которая будет определять количество букв в записи на английском языке.
+Пример:
+Введите число (от 1 до 1000):
+75
+Длина числа: 11
+
+Введите число (от 1 до 1000):
+373
+Длина числа: 27
+
+Примечание: Не считайте пробелы и дефисы. Например, число 342 (three hundred and forty-two) состоит из 23 букв,
+число 115 (one hundred and fifteen) - из 20 букв. Использование "and" при записи чисел соответствует правилам британского английского.
+
+Пример написания слов:
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven 
+twelve 
+thirteen 
+fourteen 
+fifteen
+sixteen
+seventeen
+eighteen 
+nineteen 
+twenty 
+thirty 
+forty 
+fifty 
+sixty 
+seventy
+eighty 
+ninety
+hundred
+thousand
