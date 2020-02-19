@@ -43,13 +43,6 @@ int main()
 		cin >> operand_2;
 	}
 
-	if (cin.fail())
-	{
-		cin.clear();
-		cin.ignore();
-		cout << "Invalid" << endl;
-	}
-
 	if (operator_to_use == '+')
 	{
 		cout << "Result:"
