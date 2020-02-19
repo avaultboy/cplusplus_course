@@ -1,6 +1,6 @@
 #include <iostream>
-#include <climits>
-#include <algorithm>
+//#include <climits>
+//#include <algorithm>
 
 #include "../classes/exercises.h"
 
