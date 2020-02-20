@@ -83,5 +83,7 @@ int main()
 
 	cout << initial_permutation << endl;
 
+	//   Answer: 0358926471
+
 	return 0;
 }
