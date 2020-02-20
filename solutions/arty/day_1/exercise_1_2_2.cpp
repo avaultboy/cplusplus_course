@@ -81,9 +81,12 @@ int main()
 		}
 	}
 
-	cout << initial_permutation << endl;
+	if (initial_permutation / 1000000000 == 0)
+	{
+		cout << 0;
+	}
 
-	//   Answer: 0358926471
+	cout << initial_permutation << endl;
 
 	return 0;
 }
