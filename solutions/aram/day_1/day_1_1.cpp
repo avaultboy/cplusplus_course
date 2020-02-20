@@ -12,7 +12,7 @@
 using namespace std;
 
 int checkZero(int a);
-int convertToInt(string s);
+int reverse(int n);
 
 int main() {
 	int x;
@@ -21,10 +21,9 @@ int main() {
 	if(x>0)
 	{k=1;}
 		x = checkZero(x);
-	    string s = to_string(x);
-	    s.assign(s.rbegin(), s.rend());
-    	x = convertToInt(s);
-	    cout << x*k << endl;
+	    x = reverse(x);
+
+	    cout << x << endl;
 
 	return 0;
 }
@@ -41,9 +40,11 @@ int checkZero(int a)
 			return a;
 		}
 	}
-int convertToInt(string s)
-{
-	try{int l = stoi(s);return l;}
-	catch(const out_of_range &){return 0;}
-}
 
+int reverse(int n) {
+    int r = n%10;
+    while (n/=10) {
+        r = r*10 + n%10;
+    }
+    return r;
+}
