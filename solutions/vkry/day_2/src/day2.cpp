@@ -14,8 +14,11 @@ using namespace std;
 
 int main(){
 
-	Day21 day21;
-	day21.do21();
+//	Day21 day21;
+//	day21.do21();
+
+	Day22 day22;
+	day22.do22();
 
 }
 
