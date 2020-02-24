@@ -1,0 +1,131 @@
+#include <iostream>
+
+using namespace std;
+string simple_number(int);
+string double_number(int, int);
+int main()
+{
+	int number, digits[4];
+	string result;
+	cin >> number;
+	while (number > 1000) {
+		cout << "No-no-no, your number has to be form 0 to 1000" << endl;
+		cin >> number;
+	}
+	int number_backup = number;
+	for (int i = 3; i >= 0; i--) {
+		digits[i] = number % 10;
+		number /= 10;
+	}
+	if (digits[0] == 1) result += "Onethousand";
+	if (digits[1] != 0) result += simple_number(digits[1]) + "hundred";
+	if (digits[1] != 0 && (digits[2] != 0 || digits[3] != 0)) result += "and";
+	if (digits[2] != 0) result += double_number(digits[2], digits[3]);
+	if ((digits[3] != 0) && (digits[2] == 0)) result += simple_number(digits[3]);
+	cout << result << endl << size(result) << endl;
+	return 0;
+}
+string simple_number(int digit) {
+	string result;
+	switch (digit)
+	{
+	case 1:
+		result = "one";
+		break;
+	case 2:
+		result = "two";
+		break;
+	case 3:
+		result = "three";
+		break;
+	case 4:
+		result = "four";
+		break;
+	case 5:
+		result = "five";
+		break;
+	case 6:
+		result = "six";
+		break;
+	case 7:
+		result = "seven";
+		break;
+	case 8:
+		result = "eight";
+		break;
+	case 9:
+		result = "nine";
+		break;
+	default:
+		break;
+	}
+	return result;
+}
+string double_number(int digit_1, int digit_2) {
+	string result;
+	switch (digit_1)
+	{
+	case 1:
+		switch (digit_2)
+		{
+		case 1:
+			result = "eleven";
+			break;
+		case 2:
+			result = "twelve";
+			break;
+		case 3:
+			result = "thirteen";
+			break;
+		case 4:
+			result = "fourteen";
+			break;
+		case 5:
+			result = "fifteen";
+			break;
+		case 6:
+			result = "sixteen";
+			break;
+		case 7:
+			result = "seventeen";
+			break;
+		case 8:
+			result = "eighteen";
+			break;
+		case 9:
+			result = "nineteen";
+			break;
+		default:
+			result = "ten";
+			break;
+		}
+		break;
+	case 2:
+		result = "twenty";
+		break;
+	case 3:
+		result = "thirty";
+		break;
+	case 4:
+		result = "fourty";
+		break;
+	case 5:
+		result = "fifty";
+		break;
+	case 6:
+		result = "sixty";
+		break;
+	case 7:
+		result = "seventy";
+		break;
+	case 8:
+		result = "eighty";
+		break;
+	case 9:
+		result = "ninety";
+		break;
+	default:
+		break;
+	}
+	return (digit_2 != 0) && (digit_1 != 1) ? result + simple_number(digit_2) : result;
+}
