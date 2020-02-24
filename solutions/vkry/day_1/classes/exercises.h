@@ -31,7 +31,6 @@ public:
 	void do12();
 };
 
-
 class Day13 {
 public:
 	Day13();
@@ -40,5 +39,12 @@ public:
 	void do13();
 };
 
+class Day122 {
+public:
+	Day122();
+	virtual ~Day122();
+
+	void do122();
+};
 #endif /* EXERCISES_H_ */
 

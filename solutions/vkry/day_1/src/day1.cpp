@@ -1,6 +1,7 @@
 #include <iostream>
 //#include <climits>
 //#include <algorithm>
+#include<cmath>
 
 #include "../classes/exercises.h"
 
@@ -37,12 +38,15 @@ int main() {
 		int in;
 		Day11 day11;
 		Day12 day12;
+		Day122 day122;
 		Day13 day13;
 
 		cout << "1. Задание 1 Развернуть число" << endl;
 		cout << "2. Задание 2 Палиндром" << endl;
-		cout << "3. Задание 3 Калькулятор +,-,*,/" << endl;
-		cout << "Press 1, 2 or 3 to choose an exercise" << endl;
+		cout << "3. Задание 2-2 Словарные перестановки" << endl;
+		cout << "4. Задание 3 Калькулятор +,-,*,/" << endl;
+
+		cout << "Press 1, 2, 3 or 4 to choose an exercise" << endl;
 		cin >> in;
 
 		switch (in) {
@@ -55,11 +59,15 @@ int main() {
 				break;
 
 			case 3:
+				day122.do122();;
+				break;
+
+			case 4:
 				day13.do13();
 				break;
 
 			default:
-				cout << "please type just 1, 2 or 3: " << endl;
+				cout << "please type just 1, 2, 3 or 4: " << endl;
 				cin.clear();
 				continue;
 		}
