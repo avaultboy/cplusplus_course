@@ -33,5 +33,14 @@ public:
 
 	void do22();
 };
+
+class Day23 {
+public:
+	Day23();
+	virtual ~Day23();
+
+	void do23();
+};
+
 #endif /* EXERCISES_H_ */
 
