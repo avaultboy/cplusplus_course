@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -8,16 +9,16 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-ListNode* array2list(int* nums)
+ListNode* array2list(vector<int> nums)
 {
-    int size = sizeof(nums)/sizeof(nums[0]);
+    int size = nums.size();
 
     if (!size) return nullptr;
 
     ListNode* result = new ListNode(nums[0]);
     ListNode* list = result;
 
-    for(int i = 1; i <= size; ++i) {
+    for(int i = 1; i < size; ++i) {
         list->next = new ListNode(nums[i]);
         list = list->next;
     }
@@ -85,8 +86,8 @@ ListNode* mergeLists(ListNode* list1, ListNode* list2)
 
 int main()
 {
-    int arr1[] = {1,2,4};
-    int arr2[] = {1,3,4};
+    vector<int> arr1 = {1,2,4};
+    vector<int> arr2 = {1,3,4};
     ListNode *lst1 = array2list(arr1);
     ListNode *lst2 = array2list(arr2);
     prnList(lst1);

@@ -1,4 +1,6 @@
 #include <iostream>
+//#include <iterator>
+#include <vector>
 
 using namespace std;
 
@@ -8,16 +10,18 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-ListNode* array2list(int* nums)
-{
-    int size = sizeof(nums)/sizeof(nums[0]);
 
+ListNode* array2list(vector<int> nums)
+{
+    int size = nums.size();
+    //cout << "Size = " << size << endl;
+    
     if (!size) return nullptr;
 
     ListNode* result = new ListNode(nums[0]);
     ListNode* list = result;
 
-    for(int i = 1; i <= size; ++i) {
+    for(int i = 1; i < size; ++i) {
         list->next = new ListNode(nums[i]);
         list = list->next;
     }
@@ -92,8 +96,9 @@ ListNode* sumLists(ListNode* list1, ListNode* list2)
 
 int main()
 {
-    int arr1[] = {2,4,7};
-    int arr2[] = {5,6,4};
+    vector<int> arr1 = {9,7,5};
+    vector<int> arr2 = {3,2};
+    
     ListNode *lst1 = array2list(arr1);
     ListNode *lst2 = array2list(arr2);
     prnList(lst1);
